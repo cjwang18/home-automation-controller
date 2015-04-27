@@ -1,0 +1,36 @@
+<div class="row">
+    <h1 class="page-header">
+        Outlet Controller
+        <small>Turn 'em on and off.</small>
+    </h1>
+    <h2>
+        TODO
+    </h2>
+    <p>
+        I want to implement a toggle switch instead of having buttons. However, this would require saving state.
+    </p>
+    <p>
+        The following are some interestingly-styled toggles:
+    </p>
+    <ul>
+        <li><a href="http://www.queness.com/post/14585/toggle-switches-in-web-development">Toggle Switches in Web Development</a></li>
+        <li><a href="http://codepen.io/m412c0/pen/geKpa">Simple Grayscale Switch</a></li>
+        <li><a href="http://codepen.io/pocketjoso/pen/sgtDF">Fancy Wall Panel Switch</a></li>
+        <li><a href="http://codepen.io/billycrist/pen/CHmiE">Silver with Green Accents</a></li>
+        <li><a href="http://codepen.io/alextebbs/pen/mIyiu">A More Rectangular Toggle</a></li>
+        <li><a href="https://proto.io/freebies/onoff/">On/Off Switch CSS Generator</a></li>
+    </ul>
+</div>
+<div class="toggle-container">
+    <div class="row" ng-repeat="toggle in outletToggles">
+        <label>{{toggle.label}}</label>
+        <div class="btn-group btn-group-justified" role="group">
+            <div class="btn-group" role="group">
+                <button toggle-outlet type="button" data-outlet-id="{{$index + 1}}" data-outlet-status="on" class="btn btn-default">On</button>
+            </div>
+            <div class="btn-group" role="group">
+                <button toggle-outlet type="button" data-outlet-id="{{$index + 1}}" data-outlet-status="off" class="btn btn-default">Off</button>
+            </div>
+        </div>
+    </div>
+<div>
